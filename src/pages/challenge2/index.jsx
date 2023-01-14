@@ -20,7 +20,7 @@ export default function Challenge2() {
       <div className='md:grid md:grid-cols-2 flex flex-col justify-center'>
         <div className='flex flex-col items-end md:pr-10 md:py-36'>
           <button onClick={toggleEnabled}>
-            {enabled ? <Close /> : <Round />}
+            {enabled ? <Close className='w-[16px] mb-2' /> : <Round />}
           </button>
           {enabled ? <img src={spin} className='w-[489px]'/> : <Sofa className='w-[500px]'/>}
         </div>
