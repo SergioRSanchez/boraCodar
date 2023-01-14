@@ -18,7 +18,7 @@ export default function Challenge2() {
   return (
     <>
       <div className='md:grid md:grid-cols-2 flex flex-col justify-center'>
-        <div className='flex flex-col items-end md:pr-10 md:py-36'>
+        <div className='flex flex-col items-end pr-10 md:py-36'>
           <button onClick={toggleEnabled}>
             {enabled ? <Close className='w-[16px] mb-2' /> : <Round />}
           </button>
