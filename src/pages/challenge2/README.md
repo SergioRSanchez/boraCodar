@@ -1,6 +1,6 @@
-<h1><strong>Music Player</strong></h1>
+<h1><strong>Product Card</strong></h1>
 
-<p>First Challenge was to create a Music Player. I made it using Vite + React + Tailwind!</p>
+<p>Second Challenge was to create a Product Card. I made it using Vite + React + Tailwind!</p>
 <br>
 
 *Desktop*
