@@ -1,6 +1,7 @@
 import './css/main.css';
 
 import { useState } from 'react';
+import { BrowserRouter, useNavigate } from 'react-router-dom';
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
@@ -21,6 +22,7 @@ import challenge4 from '../challenge4/assets/capa.png';
 import challenge5 from '../challenge5/assets/capa.png';
 
 
+
 export function Home() {
   const [ darkMode, setDarkMode ] = useState(false)
 
@@ -30,6 +32,24 @@ export function Home() {
     } else (
       setDarkMode(false)
     )
+  }
+
+  const navigate = useNavigate();
+
+  function goToChallenge1() {
+    navigate('/challenge1')
+  }
+  function goToChallenge2() {
+    navigate('challenge2')
+  }
+  function goToChallenge3() {
+    navigate('challenge3')
+  }
+  function goToChallenge4() {
+    navigate('challenge4')
+  }
+  function goToChallenge5() {
+    navigate('challenge5')
   }
 
   return (
@@ -59,27 +79,27 @@ export function Home() {
 
         <Carousel>
 
-          <div>
+          <div onClick={goToChallenge1}>
             <img src={challenge1} alt="" />
             <p className="legend">Challenge 1: Music Player</p>
           </div>
 
-          <div>
+          <div onClick={goToChallenge2}>
             <img src={challenge2} alt="" />
             <p className="legend">Challenge 2: Product Card</p>
           </div>
           
-          <div>
+          <div onClick={goToChallenge3}>
             <img src={challenge3} alt="" />
             <p className="legend">Challenge 3: Buttons and Cursors</p>
           </div>
           
-          <div>
+          <div onClick={goToChallenge4}>
             <img src={challenge4} alt="" />
             <p className="legend">Challenge 4: Chat</p>
           </div>
           
-          <div>
+          <div onClick={goToChallenge5}>
             <img src={challenge5} alt="" />
             <p className="legend">Challenge 5: Calculator</p>
           </div>
