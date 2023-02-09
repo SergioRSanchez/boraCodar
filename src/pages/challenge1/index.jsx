@@ -5,7 +5,7 @@ import { ReactComponent as PlayForward } from './assets/playForward.svg'
 
 import './css/main.css'
 
-export default function Challenge1() {
+export function Challenge1() {
   return (
     <>
       <div className='bg-[#0F0D13] flex flex-col sm:flex-row gap-8 items-center'>

@@ -8,7 +8,7 @@ import spin from './assets/spin.gif'
 
 import './css/main.css'
 
-export default function Challenge2() {
+export function Challenge2() {
 
   const [enabled, setEnabled] = useState(false)
   const toggleEnabled = () => {

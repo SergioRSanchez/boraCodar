@@ -9,7 +9,7 @@ import { ReactComponent as Movable } from './assets/movable.svg'
 
 import './css/main.css'
 
-export default function Challenge3() {
+export function Challenge3() {
 
   const [buttonType, setButton] = useState(1)
   const toggleButton1 = () => {
