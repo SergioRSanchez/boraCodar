@@ -7,7 +7,6 @@ import { ReactComponent as Pointer4 } from './assets/pointer4.svg'
 import { ReactComponent as Loading } from './assets/loading.svg'
 import { ReactComponent as Movable } from './assets/movable.svg'
 
-import './css/main.css'
 
 export function Challenge3() {
 
@@ -24,7 +23,7 @@ export function Challenge3() {
 
   return (
     <>
-      <div className='flex justify-between'>
+      <div className='flex justify-between bg-[#0B0911] font-["Inter"] text-white'>
         
         <div className='px-[75px] py-28 flex flex-col gap-5'>
           <div className='flex flex-col'>
@@ -101,7 +100,7 @@ export function Challenge3() {
           <div className='flex justify-center flex-col gap-8'>
             {buttonType == 1 && (
               <>
-                <button className='bg-[#8257E5] hover:bg-[#9674E5] focus:border-2 border-[#D9CDF7] px-[90px] py-3 text-sm rounded-full'>INTERAJA COMIGO</button>
+                <button className='bg-[#8257E5] hover:bg-[#9674E5] focus:border-2 border-[#D9CDF7] px-6 py-3 text-sm rounded-full'>INTERAJA COMIGO</button>
                 <button className='bg-[#8257E5] opacity-40 px-6 py-3 text-sm rounded-full cursor-not-allowed'>INTERAJA COMIGO</button>
                 <button className='bg-[#8257E5] px-6 py-3 text-sm rounded-full flex items-center justify-center cursor-move'><Movable className='mr-2'/>INTERAJA COMIGO</button>
               </>

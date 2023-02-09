@@ -3,12 +3,11 @@ import { ReactComponent as PlayBack } from './assets/playBack.svg'
 import { ReactComponent as Play } from './assets/play.svg'
 import { ReactComponent as PlayForward } from './assets/playForward.svg'
 
-import './css/main.css'
 
 export function Challenge1() {
   return (
     <>
-      <div className='bg-[#0F0D13] flex flex-col sm:flex-row gap-8 items-center'>
+      <div className='bg-[#0F0D13] font-["Roboto"] h-full sm:h-screen py-8 flex flex-col sm:flex-row gap-8 items-center justify-center'>
 
         <section>
           <div className='bg-[#2A2141] py-9 px-9 rounded-lg w-64 flex flex-col gap-7'>
