@@ -7,7 +7,7 @@ import {ReactComponent as Send} from './assets/send.svg';
 export function Challenge4() {
   return (
     <>
-      <div className='bg-[#1A1924] font-["Roboto"] py-6 px-8 sm:py-8 sm:px-[72px] flex flex-col gap-[30px] h-full sm:h-screen justify-between'>
+      <div className='bg-[#1A1924] font-["Roboto"] py-6 px-8 sm:py-8 sm:px-[72px] flex flex-col gap-[30px] h-screen justify-between'>
         <div >
           <div>
             <div className='flex justify-between items-center'>
