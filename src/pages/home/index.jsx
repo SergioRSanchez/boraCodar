@@ -58,7 +58,7 @@ export function Home() {
       ? 
       "font-['Roboto'] md:bg-[url('src/pages/home/assets/Desktop-noturno.png')] bg-[url('src/pages/home/assets/Mobile-noturno.png')] bg-cover flex flex-col gap-4 items-center pt-12 pb-7 md:px-[426px] px-5 transition-all"
       : 
-      `font-['Roboto'] md:bg-[url('../../pages/home/assets/Desktop-diurno.png')] bg-[url('src/pages/home/assets/Mobile-diurno.png')] bg-cover flex flex-col gap-4 items-center pt-12 pb-7 md:px-[426px] px-5 transition-all`
+      `font-['Roboto'] md:bg-[url('../../src/pages/home/assets/Desktop-diurno.png')] bg-[url('src/pages/home/assets/Mobile-diurno.png')] bg-cover flex flex-col gap-4 items-center pt-12 pb-7 md:px-[426px] px-5 transition-all`
     }>
       <div className='flex justify-center items-center'>
         <Rocket  height={50} />
