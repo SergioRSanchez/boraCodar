@@ -15,15 +15,15 @@ export function Challenge2() {
 
   return (
     <>
-      <div className='md:grid md:grid-cols-2 flex flex-col justify-center bg-[#D9CDF7] h-screen py-8 font-["Lato"]'>
-        <div className='flex flex-col items-end pr-10 md:py-36'>
+      <div className='sm:grid sm:grid-cols-2 flex flex-col justify-center bg-[#D9CDF7] h-screen py-8 font-["Lato"]'>
+        <div className='flex flex-col items-end pr-10 sm:py-36'>
           <button onClick={toggleEnabled}>
             {enabled ? <Close className='w-[16px] mb-2' /> : <Round />}
           </button>
-          {enabled ? <img src={spin} className='w-[489px]'/> : <Sofa className='w-[500px]'/>}
+          {enabled ? <img src={spin} className='w-[489px]'/> : <Sofa className='w-[350px] lg:w-[500px]'/>}
         </div>
 
-        <div className='md:py-44 m-auto md:m-0'>
+        <div className='sm:py-44 m-auto sm:m-0'>
           <div className='flex flex-col gap-3 mb-5'>
             <p className='font-light text-xs text-[#271A45]'>CÓDIGO: 42404</p>
             <h1 className='font-["Crimson_Pro"] font-semibold text-3xl text-[#271A45]'>Sofá Margot II - Rosé</h1>
