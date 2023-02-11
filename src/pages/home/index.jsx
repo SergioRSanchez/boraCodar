@@ -65,7 +65,7 @@ export function Home() {
         <div className='text-[#C6ADFF] text-3xl'> #boracodar</div>
       </div>
       <div>
-        <button className='' onClick={toggleDarkMode}>
+        <button onClick={toggleDarkMode}>
           {
             darkMode 
             ?
@@ -77,7 +77,7 @@ export function Home() {
       </div>
       <div>
 
-        <Carousel>
+        <Carousel >
 
           <div onClick={goToChallenge1}>
             <img src={challenge1} alt="" />
@@ -108,10 +108,10 @@ export function Home() {
 
       </div>
 
-      <div className='flex gap-8 items-center'>
-        <Github className={darkMode ? 'fill-white cursor-pointer transition-all' : 'fill-black cursor-pointer transition-all'} />
-        <Instagram className={darkMode ? 'fill-white cursor-pointer transition-all' : 'fill-black cursor-pointer transition-all'} />
-        <Linkedin className={darkMode ? 'fill-white cursor-pointer transition-all' : 'fill-black cursor-pointer transition-all'} />
+      <div className='flex gap-8 items-center justify-evenly'>
+        <a href="https://github.com/SergioRSanchez" target='_blank'><Github  className={darkMode ? 'fill-white cursor-pointer transition-all' : 'fill-black cursor-pointer transition-all'} /></a>
+        <a href="https://www.instagram.com/sergior.chez/" target='_blank'><Instagram className={darkMode ? 'fill-white cursor-pointer transition-all' : 'fill-black cursor-pointer transition-all'} /></a>
+        <a href="https://www.linkedin.com/in/sergio-roberto-sanchez-filho" target='_blank'><Linkedin className={darkMode ? 'fill-white cursor-pointer transition-all' : 'fill-black cursor-pointer transition-all'}/></a>
       </div>
     </div>
   );
