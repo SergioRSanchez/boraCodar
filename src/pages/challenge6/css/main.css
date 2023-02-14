@@ -1,27 +1,27 @@
-#boarderCard1 {
+#boardingPass1 {
 	--mask: radial-gradient(20px at 40px 100%,#0000 98%,#000) -40px;
   -webkit-mask: var(--mask);
           mask: var(--mask);
 }
 
-#boarderCard1:hover {
+#boardingPass1:hover {
   animation: rotateOutUpLeft;
   animation-duration: 2s;
 }
 
-#boarderCard2 {
+#boardingPass2 {
 	--mask: radial-gradient(20px at 40px 40px,#0000 98%,#000) -40px -40px;
   -webkit-mask: var(--mask);
           mask: var(--mask);
 }
 
-#boarderCard3 {
+#boardingPass3 {
   --mask: radial-gradient(20px at 20px 0,#0000 98%,#000) -20px;
   -webkit-mask: var(--mask);
           mask: var(--mask);
 }
 
-#boarderCard3:hover {
+#boardingPass3:hover {
   animation: rotateOutDownLeft;
   animation-duration: 2s;
 }

@@ -11,7 +11,7 @@ export function Challenge6() {
         <p className='text-white font-bold text-xl mb-4'>Cartão de embarque</p>
       </div>
 
-      <div id='boarderCard1' className='animate__animated  bg-white rounded-3xl'>
+      <div id='boardingPass1' className='animate__animated  bg-white rounded-3xl'>
         <div className='flex px-8 py-6 justify-between gap-6'>
           <div className=''>
             <p className='text-sm opacity-60'>Voo</p>
@@ -46,7 +46,7 @@ export function Challenge6() {
 
       </div>
 
-      <div id='boarderCard2' className='bg-white rounded-3xl w-[368px] border-t border-dashed border-gray-400'>
+      <div id='boardingPass2' className='bg-white rounded-3xl w-[368px] border-t border-dashed border-gray-400'>
         <div className='flex px-8 py-6 justify-between'>
             <div className=''>
               <p className='text-sm opacity-60'>Passageiro</p>
@@ -60,7 +60,7 @@ export function Challenge6() {
           </div>
       </div>
 
-      <div id='boarderCard3' className='animate__animated  bg-white rounded-3xl border-t border-dashed border-gray-400 px-8 py-6 w-[368px] flex flex-col gap-6'>
+      <div id='boardingPass3' className='animate__animated  bg-white rounded-3xl border-t border-dashed border-gray-400 px-8 py-6 w-[368px] flex flex-col gap-6'>
         <div>
           <div className='flex justify-between items-center'>
             <div className='flex flex-col gap-3'>
