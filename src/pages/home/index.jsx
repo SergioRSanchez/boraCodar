@@ -66,7 +66,7 @@ export function Home() {
     }>
       <div className='flex justify-center items-center'>
         <Rocket  height={50} />
-        <div className='text-[#C6ADFF] text-3xl'> #boracodar</div>
+        <div className='text-[#C6ADFF] text-3xl'> #boraCodar</div>
       </div>
       <div>
         <button onClick={toggleDarkMode}>
