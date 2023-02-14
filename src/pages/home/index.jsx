@@ -18,6 +18,7 @@ import challenge2 from '../challenge2/assets/desktop.png';
 import challenge3 from '../challenge3/assets/capa.png';
 import challenge4 from '../challenge4/assets/capa.png';
 import challenge5 from '../challenge5/assets/capa.png';
+import challenge6 from '../challenge6/assets/capa.png';
 
 import desktopDay from './assets/Desktop-diurno.png'
 
@@ -50,6 +51,9 @@ export function Home() {
   }
   function goToChallenge5() {
     navigate('challenge5')
+  }
+  function goToChallenge6() {
+    navigate('challenge6')
   }
 
   return (
@@ -102,6 +106,11 @@ export function Home() {
           <div onClick={goToChallenge5}>
             <img src={challenge5} alt="" />
             <p className="legend">Challenge 5: Calculator</p>
+          </div>
+          
+          <div onClick={goToChallenge6}>
+            <img src={challenge6} alt="" />
+            <p className="legend">Challenge 6: Boarding Pass</p>
           </div>
 
         </Carousel>
