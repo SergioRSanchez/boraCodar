@@ -1,13 +1,15 @@
+import './css/main.css'
+
 import { ReactComponent as Airplane } from './assets/airplane.svg'
 
 export function Challenge6() {
   return (
     <div className='font-["Rubik"] h-screen flex flex-col items-center justify-center bg-gradient-to-br from-[#8257E5] to-[#271A45]'>
       <div>
-        <p className='text-white font-bold text-xl'>Cartão de embarque</p>
+        <p className='text-white font-bold text-xl mb-5'>Cartão de embarque</p>
       </div>
 
-      <div className='bg-white rounded-3xl'>
+      <div id='boarderCard1' className='bg-white rounded-3xl'>
         <div className='flex px-8 py-6 justify-between gap-6'>
           <div className=''>
             <p className='text-sm opacity-60'>Voo</p>
@@ -40,11 +42,28 @@ export function Challenge6() {
 
         </div>
 
-        <div></div>
       </div>
 
-      <div>
-        <p></p>
+      <div id='boarderCard2' className='bg-white rounded-3xl w-[368px] border-t border-dashed border-gray-400'>
+        <div className='flex px-8 py-6 justify-between'>
+            <div className=''>
+              <p className='text-sm opacity-60'>Passageiro</p>
+              <p className='font-bold'>Sérgio Sanchez</p>
+            </div>
+
+            <div className='text-right'>
+              <p className='text-sm opacity-60 '>Assento</p>
+              <p className='font-bold'>28A</p>
+            </div>
+          </div>
+      </div>
+
+      <div className='bg-white rounded-3xl border-t border-dashed border-gray-400'>
+        <div></div>
+        <div>
+          <span className='font-bold'>Atenção:</span>
+          <span>o portão fecha 16:45</span>
+        </div>
       </div>
     </div>
   )
