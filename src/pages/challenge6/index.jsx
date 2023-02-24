@@ -1,10 +1,10 @@
-import './css/main.css';
-import 'animate.css';
+import './css/main.css'
+import 'animate.css'
 
 import { ReactComponent as Airplane } from './assets/airplane.svg'
 import { ReactComponent as QRCode } from './assets/qrcode.svg'
 
-export function Challenge6() {
+export function Challenge6 () {
   return (
     <div className='font-["Rubik"] h-screen flex flex-col items-center justify-center bg-gradient-to-br from-[#8257E5] to-[#271A45]'>
       <div>
