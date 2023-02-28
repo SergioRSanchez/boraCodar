@@ -1,6 +1,7 @@
+import { useState } from 'react'
+
+
 import { ReactComponent as Smile } from './assets/smile.svg'
-import { ReactComponent as ReachSales } from './assets/reachSales.svg'
-import { ReactComponent as ReachGoal } from './assets/reachGoal.svg'
 import { ReactComponent as Expected } from './assets/expected.svg'
 import { ReactComponent as SalesEllipse } from './assets/salesEllipse.svg'
 import { ReactComponent as GoalEllipse } from './assets/goalEllipse.svg'
@@ -9,9 +10,10 @@ import { ReactComponent as DownPolygon } from './assets/downPolygon.svg'
 import { ReactComponent as Graph } from './assets/graph.svg'
 
 
+
 export function NetPromoterScore() {
   return (
-    <div className='bg-[#363447] flex flex-col gap-8 font-["Inter"] px-12 py-7 w-[296px] rounded-2xl shadow-[3px_4px_26px_0_rgba(0,0,0,0.25)]'>
+    <div className='bg-[#363447] flex flex-col gap-4 font-["Inter"] px-12 py-7 w-[296px] rounded-2xl shadow-[3px_4px_26px_0_rgba(0,0,0,0.25)]'>
       <h1 className='text-white text-2xl font-semibold text-center'>NPS geral</h1>
       <div className='flex flex-col items-center gap-4 py-11'>
         <Smile />
@@ -28,10 +30,16 @@ export function NetPromoterScore() {
 
 export function ClosedSales() {
   return (
-    <div className='bg-[#363447] flex flex-col gap-8 items-center font-["Inter"] px-12 py-7 w-[351px] rounded-2xl shadow-[3px_4px_26px_0_rgba(0,0,0,0.25)]'>
-      <h1 className='text-white text-2xl font-semibold text-center'>Vendas fechadas</h1>
-      <ReachSales />
-      <div className='flex gap-5'>
+    <div className='bg-[#363447] flex flex-col items-center font-["Inter"] px-10 py-7 w-[351px] rounded-2xl shadow-[3px_4px_26px_0_rgba(0,0,0,0.25)]'>
+      <h1 className='text-white text-2xl font-semibold text-center mb-8'>Vendas fechadas</h1>
+      <div>
+        <svg className='w-[160px] h-[160px] relative'>
+          <circle r='70' cx='70' cy='70' className='w-[155px] h-[155px] fill-none stroke-[#464556] stroke-[10px] translate-x-[8px] translate-y-[8px]' style={{strokeDasharray: 440, strokeDashoffset: 0}}></circle>
+          <circle r='70' cx='70' cy='70' className='w-[155px] h-[155px] fill-none stroke-[#7568f0] stroke-[15px] translate-x-[8px] translate-y-[8px] transition-all' style={{strokeDasharray: 440, strokeDashoffset: 132}}></circle>
+        </svg>
+        <div className='relative -top-2 left-0 w-full h-full flex justify-center items-center text-white'><p className='relative bottom-24 left-10 text-lg font-bold'>70%</p><p className='relative bottom-20 right-5'>alcançada</p></div>
+      </div>
+      <div className='flex gap-5 '>
         <div className='text-white text-sm flex gap-2'>
           <div className='flex items-center gap-1 font-medium'>
             <Expected />
@@ -48,23 +56,47 @@ export function ClosedSales() {
           <span>70</span>
         </div>
       </div>
+      
     </div>
   )
 }
 
 
 export function MonthlyGoal() {
+  const [ expect, setExpect ] = useState('')
+  const [ reach, setReach ] = useState('')
+  const [ percent, setPercent ] = useState(44)
+  const [ display, setDisplay ] = useState(90)
+  
+  function setPercentage() {
+    const reachPercent = ( reach / expect ) * 100
+    const goalPercent = 100 - reachPercent
+    const calc = 440 - ( (440 * reachPercent) / 100 )
+    console.log(reachPercent)
+    console.log(goalPercent)
+    
+    setPercent(calc)
+    setDisplay(reachPercent)
+  }
+
+
   return (
-    <div className='bg-[#363447] flex flex-col gap-8 items-center font-["Inter"] px-12 py-7 sm:w-[409px] rounded-2xl shadow-[3px_4px_26px_0_rgba(0,0,0,0.25)]'>
-      <h1 className='text-white text-2xl font-semibold text-center'>Meta mensal</h1>
-      <ReachGoal />
-      <div className='flex gap-5'>
+    <div className='bg-[#363447] flex flex-col  items-center font-["Inter"] px-10 sm:px-12 py-7 sm:w-[409px] rounded-2xl shadow-[3px_4px_26px_0_rgba(0,0,0,0.25)]'>
+      <h1 className='text-white text-2xl font-semibold text-center mb-8'>Meta mensal</h1>
+      <div>
+        <svg className='w-[160px] h-[160px] relative'>
+          <circle r='70' cx='70' cy='70' className='w-[155px] h-[155px] fill-none stroke-[#464556] stroke-[10px] translate-x-[8px] translate-y-[8px]' style={{strokeDasharray: 440, strokeDashoffset: 0}}></circle>
+          <circle r='70' cx='70' cy='70' className='w-[155px] h-[155px] fill-none stroke-[#ba7bc3] stroke-[15px] translate-x-[8px] translate-y-[8px] transition-all' style={{strokeDasharray: 440, strokeDashoffset: `${percent}`}}></circle>
+        </svg>
+        <div className='relative -top-2 left-0 w-full h-full flex justify-center items-center text-white'><p className='relative bottom-24 left-10 text-lg font-bold'>{display}%</p><p className='relative bottom-20 right-5'>alcançada</p></div>
+      </div>
+      <div className='flex gap-5 '>
         <div className='text-white text-sm flex gap-2'>
           <div className='flex items-center gap-1 font-medium'>
             <Expected />
             <span>Esperado</span>
           </div>
-          <span>R$ 70K</span>
+          <span>R$ <input type="text" placeholder='70' onChange={(e)=>setExpect(e.target.value)} className='w-[23px] bg-[#363447] text-right' />K</span>
         </div>
 
         <div className='text-white text-sm flex gap-2'>
@@ -72,7 +104,7 @@ export function MonthlyGoal() {
             <GoalEllipse />
             <span>Alcançado</span>
           </div>
-          <span>R$ 63K</span>
+          <span>R$ <input type="text" placeholder='63' onChange={(e)=>setReach(e.target.value)} onBlur={setPercentage} className='w-[20px] bg-[#363447]' />K</span>
         </div>
       </div>
     </div>
@@ -117,6 +149,7 @@ export function WeekSales() {
     </div>
   )
 }
+
 
 
 export function Challenge8() {
