@@ -7,7 +7,6 @@ import { ReactComponent as SalesEllipse } from './assets/salesEllipse.svg'
 import { ReactComponent as GoalEllipse } from './assets/goalEllipse.svg'
 import { ReactComponent as UpPolygon } from './assets/upPolygon.svg'
 import { ReactComponent as DownPolygon } from './assets/downPolygon.svg'
-import { ReactComponent as Graph } from './assets/graph.svg'
 
 
 
@@ -140,8 +139,41 @@ export function WeekSales() {
 
           </div>
 
-          <div>
-            <Graph className='w-[280px] sm:w-[523px]' />
+          <div className='sm:w-[500px] h-[200px] flex justify-between items-end'>
+            <div className='flex flex-col items-center gap-1'>
+              <svg className='w-[10px] h-[39px] bg-[#32CCBC] rounded-full' />
+              <p className='text-xs'>dom</p>
+            </div>
+
+            <div className='flex flex-col items-center gap-1'>
+              <svg className='w-[10px] h-[115px] bg-[#32CCBC] rounded-full' />
+              <p className='text-xs'>seg</p>
+            </div>
+            
+            <div className='flex flex-col items-center gap-1'>
+              <svg className='w-[10px] h-[76px] bg-[#32CCBC] rounded-full' />
+              <p className='text-xs'>ter</p>
+            </div>
+            
+            <div className='flex flex-col items-center gap-1'>
+              <svg className='w-[10px] h-[159px] bg-[#32CCBC] rounded-full' />
+              <p className='text-xs'>qua</p>
+            </div>
+            
+            <div className='flex flex-col items-center gap-1'>
+              <svg className='w-[10px] h-[129px] bg-[#32CCBC] rounded-full' />
+              <p className='text-xs'>qui</p>
+            </div>
+            
+            <div className='flex flex-col items-center gap-1'>
+              <svg className='w-[10px] h-[120px] bg-[#32CCBC] rounded-full' />
+              <p className='text-xs'>sex</p>
+            </div>
+            
+            <div className='flex flex-col items-center gap-1'>
+              <svg className='w-[10px] h-[69px] bg-[#32CCBC] rounded-full' />
+              <p className='text-xs'>sab</p>
+            </div>
           </div>
 
         </div>
