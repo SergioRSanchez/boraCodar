@@ -136,7 +136,7 @@ function WeekSales() {
                 <UpPolygon />
                 <span className='text-sm font-medium'>Dia com mais vendas</span>
               </div>
-              <p className='font-medium text-2xl'>
+              <p className='font-medium text-2xl transition-all'>
                 {biggestSales.day}
               </p>
             </div>
@@ -146,7 +146,7 @@ function WeekSales() {
                 <DownPolygon />
                 <span className='text-sm font-medium'>Dia com menos vendas</span>
               </div>
-              <p className='font-medium text-2xl'>
+              <p className='font-medium text-2xl transition-all'>
                 {lowestSales.day}
               </p>
             </div>
@@ -155,7 +155,7 @@ function WeekSales() {
 
           <div className='sm:w-[500px] h-[200px] flex justify-between items-end'>
             <div className='flex flex-col items-center gap-1'>
-              <button onClick={showInputFunction}><svg className='w-[10px] bg-[#32CCBC] rounded-full' style={{height: `${dom}`}} /></button>
+              <button onClick={showInputFunction}><svg className='w-[10px] bg-[#32CCBC] rounded-full transition-all' style={{height: `${dom}`}} /></button>
               {
                 showInput
                 ?
@@ -166,7 +166,7 @@ function WeekSales() {
             </div>
 
             <div className='flex flex-col items-center gap-1'>
-              <button onClick={showInputFunction}><svg className='w-[10px] bg-[#32CCBC] rounded-full' style={{height: `${seg}`}}/></button>
+              <button onClick={showInputFunction}><svg className='w-[10px] bg-[#32CCBC] rounded-full transition-all' style={{height: `${seg}`}}/></button>
               {
                 showInput
                 ?
@@ -177,7 +177,7 @@ function WeekSales() {
             </div>
             
             <div className='flex flex-col items-center gap-1'>
-              <button onClick={showInputFunction}><svg className='w-[10px] bg-[#32CCBC] rounded-full' style={{height: `${ter}`}}/></button>
+              <button onClick={showInputFunction}><svg className='w-[10px] bg-[#32CCBC] rounded-full transition-all' style={{height: `${ter}`}}/></button>
               {
                 showInput
                 ?
@@ -188,7 +188,7 @@ function WeekSales() {
             </div>
             
             <div className='flex flex-col items-center gap-1'>
-              <button onClick={showInputFunction}><svg className='w-[10px] bg-[#32CCBC] rounded-full' style={{height: `${qua}`}}/></button>
+              <button onClick={showInputFunction}><svg className='w-[10px] bg-[#32CCBC] rounded-full transition-all' style={{height: `${qua}`}}/></button>
               {
                 showInput
                 ?
@@ -199,7 +199,7 @@ function WeekSales() {
             </div>
             
             <div className='flex flex-col items-center gap-1'>
-              <button onClick={showInputFunction}><svg className='w-[10px] bg-[#32CCBC] rounded-full' style={{height: `${qui}`}}/></button>
+              <button onClick={showInputFunction}><svg className='w-[10px] bg-[#32CCBC] rounded-full transition-all' style={{height: `${qui}`}}/></button>
               {
                 showInput
                 ?
@@ -210,7 +210,7 @@ function WeekSales() {
             </div>
             
             <div className='flex flex-col items-center gap-1'>
-              <button onClick={showInputFunction}><svg className='w-[10px] bg-[#32CCBC] rounded-full' style={{height: `${sex}`}}/></button>
+              <button onClick={showInputFunction}><svg className='w-[10px] bg-[#32CCBC] rounded-full transition-all' style={{height: `${sex}`}}/></button>
               {
                 showInput
                 ?
@@ -221,7 +221,7 @@ function WeekSales() {
             </div>
             
             <div className='flex flex-col items-center gap-1'>
-              <button onClick={showInputFunction}><svg className='w-[10px] bg-[#32CCBC] rounded-full' style={{height: `${sab}`}}/></button>
+              <button onClick={showInputFunction}><svg className='w-[10px] bg-[#32CCBC] rounded-full transition-all' style={{height: `${sab}`}}/></button>
               {
                 showInput
                 ?
