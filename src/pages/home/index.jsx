@@ -36,12 +36,12 @@ export function Home() {
 
   const navigate = useNavigate();
 
-  function goToChallenge1() {
-    navigate('/challenge1')
-  }
-  function goToChallenge2() {
-    navigate('challenge2')
-  }
+  // function goToChallenge1() {
+  //   navigate('/challenge1')
+  // }
+  // function goToChallenge2() {
+  //   navigate('challenge2')
+  // }
   function goToChallenge3() {
     navigate('challenge3')
   }
@@ -51,15 +51,18 @@ export function Home() {
   function goToChallenge5() {
     navigate('challenge5')
   }
-  function goToChallenge6() {
-    navigate('challenge6')
-  }
+  // function goToChallenge6() {
+  //   navigate('challenge6')
+  // }
   function goToChallenge7() {
     navigate('challenge7')
   }
   function goToChallenge8() {
     navigate('challenge8')
   }
+  // function goToTeste() {
+  //   navigate('teste')
+  // }
 
   return (
     <div className={
@@ -88,15 +91,15 @@ export function Home() {
 
         <Carousel >
 
-          <div onClick={goToChallenge1}>
+          {/* <div onClick={goToChallenge1}>
             <img src={challenge1} />
             <p className="legend">Challenge 1: Music Player</p>
-          </div>
+          </div> */}
 
-          <div onClick={goToChallenge2}>
+          {/* <div onClick={goToChallenge2}>
             <img src={challenge2} />
             <p className="legend">Challenge 2: Product Card</p>
-          </div>
+          </div> */}
           
           <div onClick={goToChallenge3}>
             <img src={challenge3} />
@@ -113,10 +116,10 @@ export function Home() {
             <p className="legend">Challenge 5: Calculator</p>
           </div>
           
-          <div onClick={goToChallenge6}>
+          {/* <div onClick={goToChallenge6}>
             <img src={challenge6} />
             <p className="legend">Challenge 6: Boarding Pass</p>
-          </div>
+          </div> */}
           
           <div onClick={goToChallenge7}>
             <img src={challenge7} />
@@ -127,6 +130,11 @@ export function Home() {
             <img src={challenge8} />
             <p className="legend">Challenge 8: Dashboard</p>
           </div>
+          
+          {/* <div onClick={goToTeste}>
+            <img src={challenge8} />
+            <p className="legend">Teste</p>
+          </div> */}
 
         </Carousel>
 
