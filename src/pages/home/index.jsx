@@ -21,6 +21,7 @@ import challenge5 from '../challenge5/assets/capa.png';
 import challenge6 from '../challenge6/assets/capa.png';
 import challenge7 from '../challenge7/assets/capa.png';
 import challenge8 from '../challenge8/assets/capa.png';
+import challenge9 from '../challenge9/assets/capa.png';
 
 
 export function Home() {
@@ -59,6 +60,9 @@ export function Home() {
   }
   function goToChallenge8() {
     navigate('challenge8')
+  }
+  function goToChallenge9() {
+    navigate('challenge9')
   }
   // function goToTeste() {
   //   navigate('teste')
@@ -129,6 +133,11 @@ export function Home() {
           <div onClick={goToChallenge8}>
             <img src={challenge8} />
             <p className="legend">Challenge 8: Dashboard</p>
+          </div>
+          
+          <div onClick={goToChallenge9}>
+            <img src={challenge9} />
+            <p className="legend">Challenge 9: Currency Converter</p>
           </div>
           
           {/* <div onClick={goToTeste}>

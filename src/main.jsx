@@ -10,6 +10,7 @@ import { Challenge5 } from './pages/challenge5'
 // import { Challenge6 } from './pages/challenge6'
 import { Challenge7 } from './pages/challenge7'
 import { Challenge8 } from './pages/challenge8'
+import { Challenge9 } from './pages/challenge9'
 // import { Teste } from './pages/teste'
 import { Home } from './pages/home'
 
@@ -30,6 +31,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         {/* <Route path='/challenge6' element={<Challenge6 />} /> */}
         <Route path='/challenge7' element={<Challenge7 />} />
         <Route path='/challenge8' element={<Challenge8 />} />
+        <Route path='/challenge9' element={<Challenge9 />} />
         {/* <Route path='/teste' element={<Teste />} /> */}
       </Routes>
     </BrowserRouter>
