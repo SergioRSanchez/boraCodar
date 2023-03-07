@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Chart } from "react-google-charts";
 
 import { ReactComponent as Exchange } from './assets/exchange.svg'
+import brlFlag from './assets/brlFlag.png'
 
 
 export function Challenge9() {
@@ -182,7 +183,7 @@ export function Challenge9() {
               {
                 chooseFirstCoin === 'BRL'
                 &&
-                <img src="/src/pages/challenge9/assets/brlFlag.png" alt="" />
+                <img src={brlFlag} alt="" />
               }
               <select name="coinA" id="coinA" value={chooseFirstCoin} onChange={e => setChooseFirstCoin(e.target.value)} className='focus:outline-none' >
                 <option value="USD">USD</option>
