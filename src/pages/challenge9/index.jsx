@@ -183,7 +183,7 @@ export function Challenge9() {
               {
                 chooseFirstCoin === 'BRL'
                 &&
-                <img src={brlFlag} alt="" />
+                <img src="/src/pages/challenge9/assets/brlFlag.png" alt="" />
               }
               <select name="coinA" id="coinA" value={chooseFirstCoin} onChange={e => setChooseFirstCoin(e.target.value)} className='focus:outline-none' >
                 <option value="USD">USD</option>
@@ -239,7 +239,7 @@ export function Challenge9() {
               {
                 chooseSecondCoin === 'BRL'
                 &&
-                <img src="./challenge9/assets/brlFlag.png" alt="" />
+                <img src={brlFlag} alt="" />
               }
               <select name="coinB" id="coinB" value={chooseSecondCoin} onChange={e => setChooseSecondCoin(e.target.value)} className='focus:outline-none'>
                 <option value="USD">USD</option>
