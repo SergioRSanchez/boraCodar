@@ -233,12 +233,12 @@ export function Challenge9() {
               {
                 chooseSecondCoin === 'GBP'
                 &&
-                <img src="/assets/gbpFlag.png" alt="" />
+                <img src="./assets/gbpFlag.png" alt="" />
               }
               {
                 chooseSecondCoin === 'BRL'
                 &&
-                <img src="assets/brlFlag.png" alt="" />
+                <img src="../assets/brlFlag.png" alt="" />
               }
               <select name="coinB" id="coinB" value={chooseSecondCoin} onChange={e => setChooseSecondCoin(e.target.value)} className='focus:outline-none'>
                 <option value="USD">USD</option>
