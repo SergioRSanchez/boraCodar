@@ -37,6 +37,33 @@ export function Challenge9() {
   let anoOneDayAgo = oneDayAgo.getFullYear();
   let umDia = anoOneDayAgo + mesOneDayAgo + diaOneDayAgo
   let urlSpecificUmDia = `https://economia.awesomeapi.com.br/json/daily/${currency}/?start_date=${umDia}&end_date=${umDia}`
+
+
+  //  2 DIAS
+  let twoDaysAgo = new Date(data.getTime() - 2 * (1000 * 60 * 60 * 24))
+  let diaTwoDaysAgo = String(twoDaysAgo.getDate()).padStart(2, '0');
+  let mesTwoDaysAgo = String(twoDaysAgo.getMonth() + 1).padStart(2, '0');
+  let anoTwoDaysAgo = twoDaysAgo.getFullYear();
+  let doisDias = anoTwoDaysAgo + mesTwoDaysAgo + diaTwoDaysAgo
+  let urlSpecificDoisDias = `https://economia.awesomeapi.com.br/json/daily/${currency}/?start_date=${doisDias}&end_date=${doisDias}`
+
+
+  //  3 DIAS
+  let threeDaysAgo = new Date(data.getTime() - 3 * (1000 * 60 * 60 * 24))
+  let diaThreeDaysAgo = String(threeDaysAgo.getDate()).padStart(2, '0');
+  let mesThreeDaysAgo = String(threeDaysAgo.getMonth() + 1).padStart(2, '0');
+  let anoThreeDaysAgo = threeDaysAgo.getFullYear();
+  let tresDias = anoThreeDaysAgo + mesThreeDaysAgo + diaThreeDaysAgo
+  let urlSpecificTresDias = `https://economia.awesomeapi.com.br/json/daily/${currency}/?start_date=${tresDias}&end_date=${tresDias}`
+
+
+  //  4 DIAS
+  let fourDaysAgo = new Date(data.getTime() - 4 * (1000 * 60 * 60 * 24))
+  let diaFourDaysAgo = String(fourDaysAgo.getDate()).padStart(2, '0');
+  let mesFourDaysAgo = String(fourDaysAgo.getMonth() + 1).padStart(2, '0');
+  let anoFourDaysAgo = fourDaysAgo.getFullYear();
+  let quatroDias = anoFourDaysAgo + mesFourDaysAgo + diaFourDaysAgo
+  let urlSpecificQuatroDias = `https://economia.awesomeapi.com.br/json/daily/${currency}/?start_date=${quatroDias}&end_date=${quatroDias}`
   
   
   //  5 DIAS ATRÁS
@@ -78,14 +105,17 @@ export function Challenge9() {
 
   const [ currencyToday, setCurrencyToday ] = useState(0)
   const [ currencyADayAgo, setCurrencyADayAgo ] = useState(0)
+  const [ currencyTwoDaysAgo, setCurrencyTwoDaysAgo ] = useState(0)
+  const [ currencyThreeDaysAgo, setCurrencyThreeDaysAgo ] = useState(0)
+  const [ currencyFourDaysAgo, setCurrencyFourDaysAgo ] = useState(0)
   const [ currencyFiveDaysAgo, setCurrencyFiveDaysAgo ] = useState(0)
   const [ currencyAMonthAgo, setCurrencyAMonthAgo ] = useState(0)
   const [ currencyAYearAgo, setCurrencyAYearAgo ] = useState(0)
   const [ currencyTwoYearAgo, setCurrencyTwoYearAgo ] = useState(0)
 
   const dataBase = {
-    days: [ 'HJ', '1D', '5D', '1M', '1A', '2A' ],
-    currency: [ {currencyToday}, {currencyADayAgo}, {currencyFiveDaysAgo}, {currencyAMonthAgo}, {currencyAYearAgo}, {currencyTwoYearAgo} ]
+    days: [ '5D', '4D', '3D', '2D', '1D', 'HJ' ],
+    currency: [ {currencyFiveDaysAgo}, {currencyFourDaysAgo}, {currencyThreeDaysAgo}, {currencyTwoDaysAgo}, {currencyADayAgo}, {currencyToday} ]
   }
 
 
@@ -103,6 +133,27 @@ export function Challenge9() {
     }).then(json => {
       const quotationUmDia = json[0].ask
       setCurrencyADayAgo(quotationUmDia)
+    })
+    
+    fetch(urlSpecificDoisDias).then(result => {
+      return result.json()
+    }).then(json => {
+      const quotationDoisDias = json[0].ask
+      setCurrencyTwoDaysAgo(quotationDoisDias)
+    })
+    
+    fetch(urlSpecificTresDias).then(result => {
+      return result.json()
+    }).then(json => {
+      const quotationTresDias = json[0].ask
+      setCurrencyThreeDaysAgo(quotationTresDias)
+    })
+    
+    fetch(urlSpecificQuatroDias).then(result => {
+      return result.json()
+    }).then(json => {
+      const quotationQuatroDias = json[0].ask
+      setCurrencyFourDaysAgo(quotationQuatroDias)
     })
 
     fetch(urlSpecificCincoDias).then(result => {
@@ -266,12 +317,12 @@ export function Challenge9() {
             data={
               [
                 ["Day", "Currency"],
-                [dataBase.days[0], Number(dataBase.currency[0].currencyToday)],
-                [dataBase.days[1], Number(dataBase.currency[1].currencyADayAgo)],
-                [dataBase.days[2], Number(dataBase.currency[2].currencyFiveDaysAgo)],
-                [dataBase.days[3], Number(dataBase.currency[3].currencyAMonthAgo)],
-                [dataBase.days[4], Number(dataBase.currency[4].currencyAYearAgo)],
-                [dataBase.days[5], Number(dataBase.currency[5].currencyTwoYearAgo)],
+                [dataBase.days[0], Number(dataBase.currency[0].currencyFiveDaysAgo)],
+                [dataBase.days[1], Number(dataBase.currency[1].currencyFourDaysAgo)],
+                [dataBase.days[2], Number(dataBase.currency[2].currencyThreeDaysAgo)],
+                [dataBase.days[3], Number(dataBase.currency[3].currencyTwoDaysAgo)],
+                [dataBase.days[4], Number(dataBase.currency[4].currencyADayAgo)],
+                [dataBase.days[5], Number(dataBase.currency[5].currencyToday)],
               ]
             }
             graphID="ScatterChart"
